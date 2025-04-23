@@ -1,29 +1,28 @@
 import styles from './app.module.scss';
 import { clsx } from 'clsx';
-import { trashService } from '~/shared/services';
-
+import WeatherChecker from '../WeatherChecker';
+import WeatherNotification from '../WeatherNotification';
+import TrashContainer from '../TrashContainer';
 export const App = () => {
-
 	// YOUR TRASH
-	console.log(trashService.getTrashItems());
 
 	return (
-		<div className={
-			clsx(styles['p-home'])
-		}>
-			<div className={styles[
-				'p-home__container'
-				]}>
-				<h1 className={
-					clsx(styles['p-home__container__title'])
-				}>Welcome to the app!</h1>
-				<div
-					className={
-						clsx(styles['p-home__container__gif'])
-					}
-				></div>
+		<div className={clsx(styles['p-home'])}>
+			<h1>Recycle</h1>
+			{/* <div className={clsx(styles['p-home__greenBlob'])}></div> */}
+			<div className={clsx(styles['p-home__notification'])}>
+				<WeatherChecker /> <br />
+				<br />
+				<WeatherNotification />
+			</div>
+			<h2 className={clsx(styles['p-home__nextDelivery'])}>
+				Volgende ophaling
+			</h2>
+			<h2 className={clsx(styles['p-home__nextDeliveryDate'])}>Morgen</h2>
+			<div className={clsx(styles['p-home__trash'])}>
+				{/* <TrashChecker /> */}
+				<TrashContainer />
 			</div>
 		</div>
 	);
 };
-
