@@ -1,3 +1,4 @@
 export const SHARED_QUERY_KEYS = {
-    weather:  ['weather']
+	weather: ['weather'],
+	trash: ['trash'],
 };

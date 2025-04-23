@@ -3,8 +3,11 @@ import trashMock from '~/shared/mock/trash.json';
 
 class TrashService {
 	getTrashItems() {
-		// return TRASH_MOCK;
-		return trashMock;
+		return new Promise((resolve) => {
+			setTimeout(() => {
+				resolve(trashMock);
+			}, 1000);
+		});
 	}
 }
 

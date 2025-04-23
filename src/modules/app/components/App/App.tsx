@@ -1,8 +1,8 @@
 import styles from './app.module.scss';
 import { clsx } from 'clsx';
-import WeatherChecker from '../WeatherChecker';
-import WeatherNotification from '../WeatherNotification';
-import TrashContainer from '../TrashContainer';
+import { WeatherChecker } from '~/shared/utils/WeatherChecker';
+import { WeatherNotification } from '~/shared/utils/WeatherNotification.tsx';
+import { TrashContainer } from '~/shared/utils/TrashContainer';
 export const App = () => {
 	// YOUR TRASH
 
@@ -19,10 +19,9 @@ export const App = () => {
 				Volgende ophaling
 			</h2>
 			<h2 className={clsx(styles['p-home__nextDeliveryDate'])}>Morgen</h2>
-			<div className={clsx(styles['p-home__trash'])}>
-				{/* <TrashChecker /> */}
-				<TrashContainer />
-			</div>
+
+			{/* <TrashChecker /> */}
+			<TrashContainer />
 		</div>
 	);
 };
