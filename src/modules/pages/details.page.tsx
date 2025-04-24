@@ -17,7 +17,7 @@ export const Details = () => {
 				<br /> */}
 				<WeatherDetailsNotification />
 			</div>
-			<Link to="/home">
+			<Link to="/home" className={clsx(styles['p-home__refresh'])}>
 				<Trans>details.return</Trans>
 			</Link>
 		</div>

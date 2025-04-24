@@ -10,5 +10,21 @@
 	"2025-04-23": {
 		"id": "paper",
 		"name": "Papier/Karton"
+	},
+	"2025-04-24": {
+		"id": "none",
+		"name": "none"
+	},
+	"2025-04-25": {
+		"id": "rest",
+		"name": "Restafval"
+	},
+	"2025-04-26": {
+		"id": "PMD",
+		"name": "PMD"
+	},
+	"2025-04-27": {
+		"id": "paper",
+		"name": "Papier/Karton"
 	}
 }

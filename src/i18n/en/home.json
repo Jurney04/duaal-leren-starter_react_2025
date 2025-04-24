@@ -6,11 +6,13 @@
 	"loading": "Loading...",
 	"paper": "Paper and carton",
 	"plastic": "Plastic/PMD",
-	"noMatch": "No matches found",
+	"rest": "Residual waste",
+	"noMatch": "There is no trash pickup",
 	"trash": {
 		"sun": "You can place the trash outside tonight",
 		"rain": "Place your paper and carton outside tomorrow morning",
-		"storm": "Do not place anything outside, there is a storm warning"
+		"storm": "Do not place anything outside, there is a storm warning",
+		"none": "There is no trash pickup tomorrow"
 	},
 	"changeLanguage": "NL"
 }

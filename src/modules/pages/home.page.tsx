@@ -16,13 +16,11 @@ export const Home = () => {
 			<h1>
 				<Trans>home.title</Trans>
 			</h1>
-			{/* <div className={clsx(styles['p-home__greenBlob'])}></div> */}
+			
 			<Link
 				to="/details"
 				className={clsx(styles['p-home__notification'])}
 			>
-				{/* <WeatherConditionChecker /> <br />
-				<br /> */}
 				<WeatherNotification />
 			</Link>
 			<h2 className={clsx(styles['p-home__nextDelivery'])}>
@@ -32,7 +30,7 @@ export const Home = () => {
 				<Trans>home.tomorrow</Trans>
 			</h2>
 
-			{/* <TrashChecker /> */}
+			
 			<TrashContainer />
 			<GetNewData />
 		</div>

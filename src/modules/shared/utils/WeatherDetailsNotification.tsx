@@ -1,11 +1,9 @@
 import { useGetWeatherData } from '~/shared/hooks/useGetWeatherData';
-import { WeatherNotification } from './WeatherNotification';
 import { Trans } from 'react-i18next';
+import { getDate } from '../hooks/useGetDate';
 
 export const WeatherDetailsNotification = () => {
-	let today = new Date();
-	today.setDate(today.getDate() - 1);
-	let date = today.toISOString().slice(0, 10);
+	const date = getDate();
 	const { data } = useGetWeatherData();
 	// console.log(data);
 	if (!data) {
@@ -13,9 +11,9 @@ export const WeatherDetailsNotification = () => {
 	}
 
 	const dataTommorow = data.forecast[date];
-	console.log(dataTommorow);
 	let tip = '';
-	dataTommorow.condition.text.includes('Sunny')
+	dataTommorow.condition.text.includes('Sunny') ||
+	dataTommorow.condition.text.includes('cloud')
 		? (tip = <Trans>details.tips.1</Trans>)
 		: dataTommorow.condition.text.includes('rain')
 			? (tip = <Trans>details.tips.2</Trans>)

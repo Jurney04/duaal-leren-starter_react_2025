@@ -5,42 +5,38 @@ export const WeatherNotification = () => {
 	const trashStatus = TrashChecker();
 	const weatherText = WeatherConditionChecker('text');
 	const weatherIcon = WeatherConditionChecker('icon');
-	if (weatherText.includes('Loading') || trashStatus.includes('Loading')) {
-		return 'Loading...';
-	} else if (
-		weatherText.includes('Sunny') ||
-		weatherText.includes('cloudy')
-	) {
-		return (
+
+	return trashStatus.includes('PMD') ||
+		trashStatus.includes('paper') ||
+		trashStatus.includes('rest') ? (
+		weatherText.includes('Loading') || trashStatus.includes('Loading') ? (
+			'Loading...'
+		) : weatherText.includes('Sunny') || weatherText.includes('cloudy') ? (
 			<div>
-				<img src={weatherIcon} />
+				<img src={weatherIcon} alt="Weather Icon" />
 				<Trans>home.trash.sun</Trans>
 			</div>
-		);
-	} else if (weatherText.includes('rain') || weatherText.includes('snow')) {
-		if (trashStatus?.includes('paper') || trashStatus?.includes('carton')) {
-			return (
+		) : weatherText.includes('rain') || weatherText.includes('snow') ? (
+			trashStatus.includes('paper') || trashStatus.includes('carton') ? (
 				<div>
-					<img src={weatherIcon} />
+					<img src={weatherIcon} alt="Weather Icon" />
 					<Trans>home.trash.rain</Trans>
 				</div>
-			);
-		} else {
-			// console.log('You cant place paper/carton outside tonight');
-			return (
+			) : (
 				<div>
-					<img src={weatherIcon} />
+					<img src={weatherIcon} alt="Weather Icon" />
 					<Trans>home.trash.sun</Trans>
 				</div>
-			);
-		}
-	} else if (weatherText.includes('storm') || weatherText.includes('hagel')) {
-		// console.log('You should not place anything outside tonight');
-		return (
+			)
+		) : weatherText.includes('storm') || weatherText.includes('hagel') ? (
 			<div>
-				<img src={weatherIcon} />
+				<img src={weatherIcon} alt="Weather Icon" />
 				<Trans>home.trash.storm</Trans>
 			</div>
-		);
-	}
+		) : null
+	) : trashStatus.includes('none') ? (
+		<div>
+			<Trans>home.trash.none</Trans>
+		</div>
+	) : null;
 };

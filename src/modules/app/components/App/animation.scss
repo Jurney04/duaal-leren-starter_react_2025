@@ -1,0 +1,182 @@
+@keyframes blobAnimation {
+	0% {
+		transform: translate(-85%, -2.5%);
+	}
+	100% {
+		transform: translate(-60%, -2.5%);
+	}
+}
+@keyframes blobAnimationBackground {
+	0% {
+		transform: scale(1) translate(-85%, -2.5%);
+	}
+	100% {
+		transform: scale(2) translate(-5%, -2.5%);
+	}
+}
+@keyframes greenGradient {
+	0% {
+		background-color: greenyellow;
+	}
+	50% {
+		background-color: rgb(129, 209, 10);
+	}
+	100% {
+		background-color: greenyellow;
+	}
+}
+.p-home::before {
+	content: '';
+	color: transparent;
+	position: fixed;
+	z-index: -1;
+	background-color: greenyellow;
+	width: 1000px;
+	height: 1000px;
+	border-radius: 100%;
+	transform: translate(-85%, -2.5%);
+
+	animation-name: greenGradient;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+
+	animation-name: blobAnimation;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+	animation-direction: reverse;
+	animation-timing-function: ease-in-out;
+}
+
+.p-details::before {
+	content: '';
+	color: transparent;
+	position: fixed;
+	z-index: -1;
+	background-color: greenyellow;
+	width: 1000px;
+	height: 1000px;
+	border-radius: 100%;
+	transform: translate(-60%, -2.5%);
+	animation-name: greenGradient;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+
+	animation-name: blobAnimation;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in-out;
+}
+.p-details::after {
+	content: '';
+	position: fixed;
+	z-index: -2;
+	background-color: #acff2f50;
+	width: 1000px;
+	height: 1000px;
+	border-radius: 100%;
+	transform: scale(2) translate(-5%, -2.5%);
+
+	animation-name: blobAnimationBackground;
+	animation-duration: 0.5s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in-out;
+}
+.p-home::after {
+	content: '';
+	position: fixed;
+	z-index: -2;
+	background-color: #acff2f50;
+	width: 1000px;
+	height: 1000px;
+	border-radius: 100%;
+	transform: translate(-85%, -2.5%);
+
+	animation-name: blobAnimationBackground;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+	animation-direction: reverse;
+	animation-timing-function: ease-in-out;
+}
+.p-home__notification:hover {
+	transform: scale(1.05);
+
+	animation-name: scaleAnimation;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+}
+@keyframes scaleAnimation {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.05);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+@media screen and (max-width: 768px) {
+	@keyframes blobAnimation {
+		0% {
+			transform: translate(0%, -55%);
+		}
+		100% {
+			transform: translate(0%, -25%);
+		}
+	}
+	@keyframes blobAnimationBackground {
+		0% {
+			transform: scale(1) translate(0%, -55%);
+		}
+		100% {
+			transform: scale(1.25) translate(0%, 15%);
+		}
+	}
+	.p-home::before {
+		width: 750px;
+		height: 750px;
+		transform: translateY(-55%);
+		animation-name: blobAnimation;
+		animation-duration: 1s;
+		animation-iteration-count: 1;
+		animation-direction: reverse;
+	}
+	.p-home::after {
+		background-color: #acff2f50;
+		width: 750px;
+		height: 750px;
+		border-radius: 100%;
+		transform: translate(0%, -55%);
+
+		animation-name: blobAnimationBackground;
+		animation-duration: 1s;
+		animation-iteration-count: 1;
+		animation-direction: reverse;
+		animation-timing-function: ease-in-out;
+	}
+	.p-details::before {
+		width: 750px;
+		height: 750px;
+		border-radius: 100%;
+		transform: translateY(-25%);
+		animation-name: greenGradient;
+		animation-duration: 3s;
+		animation-iteration-count: infinite;
+
+		animation-name: blobAnimation;
+		animation-duration: 1s;
+		animation-iteration-count: 1;
+	}
+	.p-details::after {
+		width: 750px;
+		height: 750px;
+		transform: scale(1.25) translate(0%, 15%);
+
+		animation-name: blobAnimationBackground;
+		animation-duration: 1s;
+		animation-iteration-count: 1;
+		animation-timing-function: ease-in-out;
+	}
+}

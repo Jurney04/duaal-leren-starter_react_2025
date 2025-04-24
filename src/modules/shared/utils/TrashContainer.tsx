@@ -6,19 +6,16 @@ import { Trans } from 'react-i18next';
 
 export const TrashContainer = () => {
 	const date = getDate();
-	// console.log(date);
-
 	const { data } = useGetTrashData();
+
 	if (!data) {
 		return (
 			<div>
 				<Trans>home.loading</Trans>
 			</div>
-		); // Return a loading indicator
+		);
 	}
-
 	const trashId = data[date].id;
-	// console.log('TrashContainer', data);
 
 	return trashId.includes('Loading') ? (
 		<div>
@@ -32,9 +29,13 @@ export const TrashContainer = () => {
 		<div className={clsx(styles['p-home__plastic'])}>
 			<Trans>home.plastic</Trans>
 		</div>
+	) : trashId.includes('rest') ? (
+		<div className={clsx(styles['p-home__rest'])}>
+			<Trans>home.rest</Trans>
+		</div>
 	) : (
 		<div>
 			<Trans>home.noMatch</Trans>
-		</div> // Handle case where trashId doesn't match expected types
+		</div>
 	);
 };

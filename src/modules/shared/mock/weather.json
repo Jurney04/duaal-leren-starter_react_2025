@@ -1,81 +1,135 @@
 {
-  "location": {
-    "name": "Antwerp",
-    "region": "Flanders",
-    "country": "Belgium",
-    "lat": 51.22,
-    "lon": 4.40,
-    "timezone_id": "Europe/Brussels",
-    "localtime": "2025-04-21 14:00"
-  },
-  "current": {
-    "temperature": 17,
-    "feels_like": 16,
-    "weather_descriptions": ["Partly cloudy"],
-    "weather_icons": ["https://example.com/icons/partly-cloudy.png"],
-    "wind_speed": 13,
-    "wind_dir": "NW",
-    "humidity": 63,
-    "cloudcover": 40,
-    "uv_index": 4,
-    "visibility": 10,
-    "pressure": 1018,
-    "is_day": "yes"
-  },
-  "forecast": {
-    "2025-04-21": {
-      "maxtemp": 18,
-      "mintemp": 9,
-      "avgtemp": 14,
-      "sunrise": "06:32",
-      "sunset": "20:42",
-      "chance_of_rain": 10,
-      "total_precip_mm": 0.3,
-      "condition": {
-        "text": "Partly cloudy",
-        "icon": "https://example.com/icons/partly-cloudy.png"
-      },
-      "hourly": [
-        { "time": "06:00", "temp": 9, "condition": "Clear" },
-        { "time": "12:00", "temp": 16, "condition": "Partly cloudy" },
-        { "time": "18:00", "temp": 15, "condition": "Cloudy" }
-      ]
-    },
-    "2025-04-22": {
-      "maxtemp": 19,
-      "mintemp": 11,
-      "avgtemp": 15,
-      "sunrise": "06:30",
-      "sunset": "20:44",
-      "chance_of_rain": 30,
-      "total_precip_mm": 1.2,
-      "condition": {
-        "text": "Light rain showers",
-        "icon": "https://example.com/icons/light-rain.png"
-      },
-      "hourly": [
-        { "time": "06:00", "temp": 12, "condition": "Light rain" },
-        { "time": "12:00", "temp": 17, "condition": "Showers" },
-        { "time": "18:00", "temp": 15, "condition": "Cloudy" }
-      ]
-    },
-    "2025-04-23": {
-      "maxtemp": 16,
-      "mintemp": 8,
-      "avgtemp": 12,
-      "sunrise": "06:28",
-      "sunset": "20:45",
-      "chance_of_rain": 5,
-      "total_precip_mm": 0.0,
-      "condition": {
-        "text": "Sunny",
-        "icon": "https://example.com/icons/sunny.png"
-      },
-      "hourly": [
-        { "time": "06:00", "temp": 8, "condition": "Clear" },
-        { "time": "12:00", "temp": 14, "condition": "Sunny" },
-        { "time": "18:00", "temp": 13, "condition": "Sunny" }
-      ]
-    }
-  }
+	"location": {
+		"name": "Antwerp",
+		"region": "Flanders",
+		"country": "Belgium",
+		"lat": 51.22,
+		"lon": 4.4,
+		"timezone_id": "Europe/Brussels",
+		"localtime": "2025-04-21 14:00"
+	},
+	"current": {
+		"temperature": 17,
+		"feels_like": 16,
+		"weather_descriptions": ["Partly cloudy"],
+		"weather_icons": ["https://example.com/icons/partly-cloudy.png"],
+		"wind_speed": 13,
+		"wind_dir": "NW",
+		"humidity": 63,
+		"cloudcover": 40,
+		"uv_index": 4,
+		"visibility": 10,
+		"pressure": 1018,
+		"is_day": "yes"
+	},
+	"forecast": {
+		"2025-04-21": {
+			"maxtemp": 18,
+			"mintemp": 9,
+			"avgtemp": 14,
+			"sunrise": "06:32",
+			"sunset": "20:42",
+			"chance_of_rain": 10,
+			"total_precip_mm": 0.3,
+			"condition": {
+				"text": "Partly cloudy",
+				"icon": "https://cdn-icons-png.flaticon.com/512/4804/4804221.png"
+			},
+			"hourly": [
+				{ "time": "06:00", "temp": 9, "condition": "Clear" },
+				{ "time": "12:00", "temp": 16, "condition": "Partly cloudy" },
+				{ "time": "18:00", "temp": 15, "condition": "Cloudy" }
+			]
+		},
+		"2025-04-22": {
+			"maxtemp": 19,
+			"mintemp": 11,
+			"avgtemp": 15,
+			"sunrise": "06:30",
+			"sunset": "20:44",
+			"chance_of_rain": 30,
+			"total_precip_mm": 1.2,
+			"condition": {
+				"text": "Light rain showers",
+				"icon": "https://cdn-icons-png.flaticon.com/256/11420/11420825.png"
+			},
+			"hourly": [
+				{ "time": "06:00", "temp": 12, "condition": "Light rain" },
+				{ "time": "12:00", "temp": 17, "condition": "Showers" },
+				{ "time": "18:00", "temp": 15, "condition": "Cloudy" }
+			]
+		},
+		"2025-04-23": {
+			"maxtemp": 16,
+			"mintemp": 8,
+			"avgtemp": 12,
+			"sunrise": "06:28",
+			"sunset": "20:45",
+			"chance_of_rain": 5,
+			"total_precip_mm": 0.0,
+			"condition": {
+				"text": "Sunny",
+				"icon": "https://cdn-icons-png.flaticon.com/256/9055/9055356.png"
+			},
+			"hourly": [
+				{ "time": "06:00", "temp": 8, "condition": "Clear" },
+				{ "time": "12:00", "temp": 14, "condition": "Sunny" },
+				{ "time": "18:00", "temp": 13, "condition": "Sunny" }
+			]
+		},
+		"2025-04-24": {
+			"maxtemp": 14,
+			"mintemp": 7,
+			"avgtemp": 10,
+			"sunrise": "06:27",
+			"sunset": "20:46",
+			"chance_of_rain": 80,
+			"total_precip_mm": 5.0,
+			"condition": {
+				"text": "Heavy rain",
+				"icon": "https://cdn-icons-png.flaticon.com/256/11420/11420825.png"
+			},
+			"hourly": [
+				{ "time": "06:00", "temp": 7, "condition": "Rain" },
+				{ "time": "12:00", "temp": 10, "condition": "Rain" },
+				{ "time": "18:00", "temp": 9, "condition": "Rain" }
+			]
+		},
+		"2025-04-25": {
+			"maxtemp": 15,
+			"mintemp": 8,
+			"avgtemp": 11,
+			"sunrise": "06:26",
+			"sunset": "20:47",
+			"chance_of_rain": 10,
+			"total_precip_mm": 0.2,
+			"condition": {
+				"text": "Partly cloudy",
+				"icon": "https://cdn-icons-png.flaticon.com/512/4804/4804221.png"
+			},
+			"hourly": [
+				{ "time": "06:00", "temp": 8, "condition": "Clear" },
+				{ "time": "12:00", "temp": 14, "condition": "Partly cloudy" },
+				{ "time": "18:00", "temp": 13, "condition": "Cloudy" }
+			]
+		},
+		"2025-04-26": {
+			"maxtemp": 17,
+			"mintemp": 9,
+			"avgtemp": 13,
+			"sunrise": "06:25",
+			"sunset": "20:48",
+			"chance_of_rain": 20,
+			"total_precip_mm": 0.5,
+			"condition": {
+				"text": "Sunny and clear",
+				"icon": "https://cdn-icons-png.flaticon.com/512/4804/4804221.png"
+			},
+			"hourly": [
+				{ "time": "06:00", "temp": 9, "condition": "Clear" },
+				{ "time": "12:00", "temp": 16, "condition": "Partly cloudy" },
+				{ "time": "18:00", "temp": 15, "condition": "Cloudy" }
+			]
+		}
+	}
 }

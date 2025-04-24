@@ -1,10 +1,8 @@
 import { useGetWeatherData } from '~/shared/hooks/useGetWeatherData';
+import { getDate } from '../hooks/useGetDate';
 
 export const WeatherConditionChecker = (type: String) => {
-	let today = new Date();
-	today.setDate(today.getDate() - 1);
-	let date = today.toISOString().slice(0, 10);
-
+	const date = getDate();
 	const { data } = useGetWeatherData();
 	// console.log(data);
 	if (!data) {
