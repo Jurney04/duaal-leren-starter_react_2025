@@ -1,5 +1,7 @@
-import { App } from '~/app';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { RouterProvider } from 'react-router';
+import { router } from '~/app/components/routes.tsx';
+import '../Root/i18n.config';
 
 const queryClient = new QueryClient({
 	defaultOptions: {
@@ -13,6 +15,6 @@ const queryClient = new QueryClient({
 
 export const Root = () => (
 	<QueryClientProvider client={queryClient}>
-		<App />
+		<RouterProvider router={router} />
 	</QueryClientProvider>
 );

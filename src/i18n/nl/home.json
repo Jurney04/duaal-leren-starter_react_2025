@@ -1,0 +1,16 @@
+{
+	"title": "Recycle nu",
+	"pickup": "Volgende ophaling",
+	"tomorrow": "Morgen",
+	"reload": "Herlaad de data",
+	"loading": "Laden...",
+	"paper": "Papier en karton",
+	"plastic": "Plastic/PMD",
+	"noMatch": "Geen overeenkomsten gevonden",
+	"trash": {
+		"sun": "Je kan je afval vanavond al buiten zetten",
+		"rain": "Zet je papier en karton pas morgen ochtend buiten",
+		"storm": "Zet niets buiten, er is gevaar op storm"
+	},
+	"changeLanguage": "EN"
+}

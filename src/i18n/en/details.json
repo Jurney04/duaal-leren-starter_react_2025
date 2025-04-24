@@ -1,0 +1,11 @@
+{
+	"title": "Details of the weather",
+	"tips": {
+		"1": "You can place the trash outside tonight",
+		"2": "Wet paper is not easy to handle as a collection service.",
+		"3": "Do not place it outside, it can be dangerous"
+	},
+	"temperature": "The average temperature is {{temp}}°F",
+	"chance_of_rain": "The chance of rain is {{chance}}%",
+	"return": "Go back"
+}

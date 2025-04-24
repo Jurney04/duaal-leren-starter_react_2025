@@ -1,0 +1,16 @@
+{
+	"title": "Recycle now",
+	"pickup": "Next pickup",
+	"tomorrow": "Tomorrow",
+	"reload": "Reload the data",
+	"loading": "Loading...",
+	"paper": "Paper and carton",
+	"plastic": "Plastic/PMD",
+	"noMatch": "No matches found",
+	"trash": {
+		"sun": "You can place the trash outside tonight",
+		"rain": "Place your paper and carton outside tomorrow morning",
+		"storm": "Do not place anything outside, there is a storm warning"
+	},
+	"changeLanguage": "NL"
+}
