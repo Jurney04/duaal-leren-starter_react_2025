@@ -1,4 +1,5 @@
 @import './animation.scss';
+@import url('https://use.typekit.net/zbr4thx.css');
 .loader {
 	position: absolute;
 	top: 50%;
@@ -10,7 +11,7 @@
 	font-size: 20px;
 	color: #000000;
 	border-radius: 15px;
-	font-family: 'Roboto', sans-serif;
+	font-family: input-mono-narrow, monospace;
 }
 .p-home {
 	// width: 100%;
@@ -19,7 +20,7 @@
 	flex-direction: column;
 
 	padding-left: 250px;
-	font-family: 'Roboto', sans-serif;
+	font-family: input-mono-narrow, monospace;
 
 	h1 {
 		color: #000;
@@ -106,18 +107,20 @@
 		color: #000000;
 		text-decoration: none;
 		background-color: #fff;
+		font-family: input-mono-narrow, monospace;
 	}
 	&__language {
-		background-color: #fff;
 		font-size: 1rem;
 		font-weight: bold;
 		border: none;
+		background-color: transparent;
 		outline: 2.5px solid #000;
-		padding: 0.5rem 1rem;
+		padding: 0.25rem 1rem;
 		border-radius: 25px;
 		position: fixed;
 		top: 10px;
 		right: 10px;
+		font-family: input-mono-narrow, monospace;
 	}
 }
 
@@ -127,7 +130,7 @@
 	display: flex;
 	flex-direction: column;
 	padding-left: 250px;
-	font-family: 'Roboto', sans-serif;
+	font-family: input-mono-narrow, monospace;
 
 	h1 {
 		color: #000;
