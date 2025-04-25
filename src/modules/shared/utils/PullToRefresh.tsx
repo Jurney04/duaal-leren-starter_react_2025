@@ -58,7 +58,11 @@ const PullToRefresh = ({ onRefresh, children }: PullToRefreshProps) => {
 
 	return (
 		<div>
-			{isRefreshing && <div className={styles.loader}>Loading...</div>}{' '}
+			{isRefreshing && (
+				<div className={styles.loader}>
+					<p>Loading...</p>
+				</div>
+			)}{' '}
 			{/* Use the loader class */}
 			{children}
 		</div>

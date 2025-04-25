@@ -12,7 +12,9 @@ export const LanguageButton = () => {
 			onClick={changeLanguage}
 			className={clsx(styles['p-home__language'])}
 		>
-			<Trans>home.changeLanguage</Trans>
+			<p>
+				<Trans>home.changeLanguage</Trans>
+			</p>
 		</button>
 	);
 };

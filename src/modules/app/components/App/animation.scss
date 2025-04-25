@@ -1,6 +1,6 @@
 @keyframes blobAnimation {
 	0% {
-		transform: translate(-85%, -2.5%);
+		transform: translate(-77.5%, -2.5%);
 	}
 	100% {
 		transform: translate(-60%, -2.5%);
@@ -8,37 +8,42 @@
 }
 @keyframes blobAnimationBackground {
 	0% {
-		transform: scale(1) translate(-85%, -2.5%);
+		transform: scale(1) translate(-77.5%, -2.5%);
 	}
 	100% {
 		transform: scale(2) translate(-5%, -2.5%);
 	}
 }
-@keyframes greenGradient {
+@keyframes rotate {
 	0% {
-		background-color: greenyellow;
-	}
-	50% {
-		background-color: rgb(129, 209, 10);
+		transform: rotate(0deg);
 	}
 	100% {
-		background-color: greenyellow;
+		transform: rotate(360deg);
 	}
+}
+.loader p {
+	animation-name: rotate;
+	animation-duration: 0.5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
 }
 .p-home::before {
 	content: '';
 	color: transparent;
 	position: fixed;
 	z-index: -1;
-	background-color: greenyellow;
+	background: #92e325;
+	background: linear-gradient(
+		47deg,
+		rgba(146, 227, 37, 1) 0%,
+		rgba(105, 176, 12, 1) 60%,
+		rgba(76, 130, 0, 1) 100%
+	);
 	width: 1000px;
 	height: 1000px;
 	border-radius: 100%;
-	transform: translate(-85%, -2.5%);
-
-	animation-name: greenGradient;
-	animation-duration: 3s;
-	animation-iteration-count: infinite;
+	transform: translate(-77.5%, -2.5%);
 
 	animation-name: blobAnimation;
 	animation-duration: 1s;
@@ -52,14 +57,17 @@
 	color: transparent;
 	position: fixed;
 	z-index: -1;
-	background-color: greenyellow;
+	background: #92e325;
+	background: linear-gradient(
+		47deg,
+		rgba(146, 227, 37, 1) 0%,
+		rgba(105, 176, 12, 1) 60%,
+		rgba(76, 130, 0, 1) 100%
+	);
 	width: 1000px;
 	height: 1000px;
 	border-radius: 100%;
 	transform: translate(-60%, -2.5%);
-	animation-name: greenGradient;
-	animation-duration: 3s;
-	animation-iteration-count: infinite;
 
 	animation-name: blobAnimation;
 	animation-duration: 1s;
@@ -117,6 +125,22 @@
 	}
 }
 
+.p-home__language:hover {
+	animation: languageScale 1s 1 linear;
+	outline: 2.5px solid #000;
+	background-color: #fff;
+	outline-offset: 30vw;
+}
+
+@keyframes languageScale {
+	0% {
+		outline-offset: 0px;
+	}
+	100% {
+		outline-offset: 30vw;
+	}
+}
+
 @media screen and (max-width: 768px) {
 	@keyframes blobAnimation {
 		0% {
@@ -161,9 +185,6 @@
 		height: 750px;
 		border-radius: 100%;
 		transform: translateY(-25%);
-		animation-name: greenGradient;
-		animation-duration: 3s;
-		animation-iteration-count: infinite;
 
 		animation-name: blobAnimation;
 		animation-duration: 1s;
