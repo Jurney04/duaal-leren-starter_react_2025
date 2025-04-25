@@ -3,14 +3,9 @@ import { clsx } from 'clsx';
 import { useGetTrashData } from '~/shared/hooks/useGetTrashData';
 import { getDate } from '../hooks/useGetDate';
 import { Trans } from 'react-i18next';
+import { TrashData } from '../types/types';
 
-interface TrashData {
-	[key: string]: {
-		id: string;
-	};
-}
-
-export const TrashContainer= () => {
+export const TrashContainer = () => {
 	const date: string = getDate();
 	const { data }: { data: TrashData | undefined } = useGetTrashData();
 

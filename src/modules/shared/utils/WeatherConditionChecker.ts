@@ -4,7 +4,7 @@ import { WeatherCondition } from '../services/weather/weather.service';
 
 export const WeatherConditionChecker = (
 	conditionType: keyof WeatherCondition,
-) => {
+	) => {
 	const date = getDate();
 
 	const { data } = useGetWeatherData();
