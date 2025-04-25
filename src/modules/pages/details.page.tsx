@@ -1,10 +1,10 @@
 import styles from '~/app/components/App/App.module.scss';
 import { clsx } from 'clsx';
-import PullToRefresh from '../shared/utils/PullToRefresh';
-import { WeatherDetailsNotification } from '~/shared/utils/WeatherDetailsNotification.tsx';
+import PullToRefresh from '../shared/components/PullToRefresh';
+import { WeatherDetailsNotification } from '~/shared/components/WeatherDetailsNotification';
 import { Trans } from 'react-i18next';
 import { Link } from 'react-router';
-import { LanguageButton } from '~/shared/utils/LanguageButton';
+import { LanguageButton } from '~/shared/components/LanguageButton';
 import { useGetNewData } from '~/shared/hooks/useGetNewData';
 
 export const Details = () => {

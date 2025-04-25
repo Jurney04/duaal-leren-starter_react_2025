@@ -1,12 +1,12 @@
-import { TrashChecker } from './TrashChecker';
-import { WeatherConditionChecker } from './WeatherConditionChecker';
+import { TrashChecker } from '../utils/TrashChecker';
+import { WeatherConditionChecker } from '../utils/WeatherConditionChecker';
 import { Trans } from 'react-i18next';
 
 export const WeatherNotification = () => {
 	const trashStatus: string = TrashChecker();
 	const weatherText: string = WeatherConditionChecker('text');
 	const weatherIcon: string = WeatherConditionChecker('icon');
-	console.log(weatherText);
+	// console.log(weatherText);
 	return weatherText.includes('Loading') ? (
 		<Trans>home.loading</Trans>
 	) : trashStatus.includes('PMD') ||

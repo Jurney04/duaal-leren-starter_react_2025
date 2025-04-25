@@ -1,12 +1,12 @@
-import PullToRefresh from '../shared/utils/PullToRefresh';
+import PullToRefresh from '../shared/components/PullToRefresh';
 import styles from '~/app/components/App/App.module.scss';
 import { clsx } from 'clsx';
-import { WeatherNotification } from '~/shared/utils/WeatherNotification';
-import { TrashContainer } from '~/shared/utils/TrashContainer';
+import { WeatherNotification } from '~/shared/components/WeatherNotification';
+import { TrashContainer } from '~/shared/components/TrashContainer';
 import { GetNewData } from '~/shared/utils/GetNewData';
 import { Link } from 'react-router';
 import { Trans } from 'react-i18next';
-import { LanguageButton } from '~/shared/utils/LanguageButton';
+import { LanguageButton } from '~/shared/components/LanguageButton';
 import { useGetNewData } from '~/shared/hooks/useGetNewData';
 
 export const Home = () => {
