@@ -2,16 +2,36 @@ import { useGetWeatherData } from '~/shared/hooks/useGetWeatherData';
 import { Trans } from 'react-i18next';
 import { getDate } from '../hooks/useGetDate';
 
-export const WeatherDetailsNotification = () => {
+export const WeatherDetailsNotification: React.FC = () => {
 	const date = getDate();
-	const { data } = useGetWeatherData();
+
+	interface WeatherCondition {
+		text: string;
+		icon: string;
+	}
+
+	interface WeatherForecast {
+		condition: WeatherCondition;
+		avgtemp: number;
+		chance_of_rain: number;
+	}
+
+	interface WeatherData {
+		forecast: {
+			[key: string]: WeatherForecast;
+		};
+	}
+
+	const { data }: { data: WeatherData | undefined } = useGetWeatherData();
 	// console.log(data);
+
 	if (!data) {
 		return <Trans>home.loading</Trans>;
 	}
 
 	const dataTommorow = data.forecast[date];
-	let tip = '';
+	let tip: JSX.Element | string = '';
+
 	dataTommorow.condition.text.includes('Sunny') ||
 	dataTommorow.condition.text.includes('cloud')
 		? (tip = <Trans>details.tips.1</Trans>)

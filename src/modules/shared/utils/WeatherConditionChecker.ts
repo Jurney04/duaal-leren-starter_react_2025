@@ -3,7 +3,13 @@ import { getDate } from '../hooks/useGetDate';
 
 export const WeatherConditionChecker = (type: String) => {
 	const date = getDate();
-	const { data } = useGetWeatherData();
+	interface WeatherData {
+		[key: string]: {
+			id: string; 
+		};
+	}
+	const { data }: { data: WeatherData | undefined } = useGetWeatherData();
+
 	// console.log(data);
 	if (!data) {
 		return 'Loading';

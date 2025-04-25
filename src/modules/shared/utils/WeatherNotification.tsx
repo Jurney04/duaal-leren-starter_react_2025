@@ -1,10 +1,11 @@
 import { TrashChecker } from './TrashChecker';
 import { WeatherConditionChecker } from './WeatherConditionChecker';
 import { Trans } from 'react-i18next';
-export const WeatherNotification = () => {
-	const trashStatus = TrashChecker();
-	const weatherText = WeatherConditionChecker('text');
-	const weatherIcon = WeatherConditionChecker('icon');
+
+export const WeatherNotification: React.FC = () => {
+	const trashStatus: string[] = TrashChecker();
+	const weatherText: string = WeatherConditionChecker('text');
+	const weatherIcon: string = WeatherConditionChecker('icon');
 
 	return trashStatus.includes('PMD') ||
 		trashStatus.includes('paper') ||

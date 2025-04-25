@@ -4,7 +4,7 @@ import { WeatherDetailsNotification } from '~/shared/utils/WeatherDetailsNotific
 import { Trans } from 'react-i18next';
 import { Link } from 'react-router';
 import { LanguageButton } from '~/shared/utils/LanguageButton';
-export const Details = () => {
+export const Details: React.FC = () => {
 	return (
 		<div className={clsx(styles['p-details'])}>
 			<LanguageButton />

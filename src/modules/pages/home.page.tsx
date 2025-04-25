@@ -1,22 +1,20 @@
 import styles from '~/app/components/App/App.module.scss';
 import { clsx } from 'clsx';
-import { WeatherConditionChecker } from '~/shared/utils/WeatherConditionChecker';
-import { WeatherNotification } from '~/shared/utils/WeatherNotification.tsx';
+import { WeatherNotification } from '~/shared/utils/WeatherNotification';
 import { TrashContainer } from '~/shared/utils/TrashContainer';
 import { GetNewData } from '~/shared/utils/GetNewData';
 import { Link } from 'react-router';
 import { Trans } from 'react-i18next';
 import { LanguageButton } from '~/shared/utils/LanguageButton';
 
-
-export const Home = () => {
+export const Home: React.FC = () => {
 	return (
 		<div className={clsx(styles['p-home'])}>
 			<LanguageButton />
 			<h1>
 				<Trans>home.title</Trans>
 			</h1>
-			
+
 			<Link
 				to="/details"
 				className={clsx(styles['p-home__notification'])}
@@ -30,7 +28,6 @@ export const Home = () => {
 				<Trans>home.tomorrow</Trans>
 			</h2>
 
-			
 			<TrashContainer />
 			<GetNewData />
 		</div>
