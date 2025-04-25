@@ -6,13 +6,13 @@ export const WeatherNotification = () => {
 	const trashStatus: string = TrashChecker();
 	const weatherText: string = WeatherConditionChecker('text');
 	const weatherIcon: string = WeatherConditionChecker('icon');
-
-	return trashStatus.includes('PMD') ||
-		trashStatus.includes('paper') ||
-		trashStatus.includes('rest') ? (
-		weatherText.includes('Loading') || trashStatus.includes('Loading') ? (
-			'Loading...'
-		) : weatherText.includes('Sunny') || weatherText.includes('cloudy') ? (
+	console.log(weatherText);
+	return weatherText.includes('Loading') ? (
+		<Trans>home.loading</Trans>
+	) : trashStatus.includes('PMD') ||
+	  trashStatus.includes('paper') ||
+	  trashStatus.includes('rest') ? (
+		weatherText.includes('Sunny') || weatherText.includes('cloudy') ? (
 			<div>
 				<img src={weatherIcon} alt="Weather Icon" />
 				<Trans>home.trash.sun</Trans>

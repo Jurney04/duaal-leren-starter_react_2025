@@ -1,6 +1,6 @@
 @keyframes blobAnimation {
 	0% {
-		transform: translate(-77.5%, -2.5%);
+		transform: translate(-85%, -2.5%);
 	}
 	100% {
 		transform: translate(-60%, -2.5%);
@@ -8,7 +8,7 @@
 }
 @keyframes blobAnimationBackground {
 	0% {
-		transform: scale(1) translate(-77.5%, -2.5%);
+		transform: scale(1) translate(-85%, -2.5%);
 	}
 	100% {
 		transform: scale(2) translate(-5%, -2.5%);
@@ -43,7 +43,7 @@
 	width: 1000px;
 	height: 1000px;
 	border-radius: 100%;
-	transform: translate(-77.5%, -2.5%);
+	transform: translate(-85%, -2.5%);
 
 	animation-name: blobAnimation;
 	animation-duration: 1s;
