@@ -5,24 +5,7 @@ import { getDate } from '../hooks/useGetDate';
 export const WeatherDetailsNotification: React.FC = () => {
 	const date = getDate();
 
-	interface WeatherCondition {
-		text: string;
-		icon: string;
-	}
-
-	interface WeatherForecast {
-		condition: WeatherCondition;
-		avgtemp: number;
-		chance_of_rain: number;
-	}
-
-	interface WeatherData {
-		forecast: {
-			[key: string]: WeatherForecast;
-		};
-	}
-
-	const { data }: { data: WeatherData | undefined } = useGetWeatherData();
+	const { data } = useGetWeatherData();
 	// console.log(data);
 
 	if (!data) {
@@ -30,7 +13,7 @@ export const WeatherDetailsNotification: React.FC = () => {
 	}
 
 	const dataTommorow = data.forecast[date];
-	let tip: JSX.Element | string = '';
+	let tip: any = '';
 
 	dataTommorow.condition.text.includes('Sunny') ||
 	dataTommorow.condition.text.includes('cloud')

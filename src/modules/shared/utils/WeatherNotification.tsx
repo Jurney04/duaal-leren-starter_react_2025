@@ -2,8 +2,8 @@ import { TrashChecker } from './TrashChecker';
 import { WeatherConditionChecker } from './WeatherConditionChecker';
 import { Trans } from 'react-i18next';
 
-export const WeatherNotification: React.FC = () => {
-	const trashStatus: string[] = TrashChecker();
+export const WeatherNotification = () => {
+	const trashStatus: string = TrashChecker();
 	const weatherText: string = WeatherConditionChecker('text');
 	const weatherIcon: string = WeatherConditionChecker('icon');
 

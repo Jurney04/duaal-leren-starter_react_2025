@@ -1,26 +1,17 @@
 import { useGetTrashData } from '~/shared/hooks/useGetTrashData';
 import { getDate } from '../hooks/useGetDate';
 
-interface TrashItem {
-	id: string;
-	name: string;
-}
-
-interface TrashData {
-	[date: string]: TrashItem;
-}
-
-export const TrashChecker: React.FC = () => {
+export const TrashChecker = (): string => {
 	const date: string = getDate();
-	const { data }: { data: TrashData } = useGetTrashData();
-
+	const { data } = useGetTrashData(); // Destructure data, isLoading, and error
 	if (!data) {
-		return 'Loading...';
+		return 'No trash data available.'; // Handle case where data is undefined
 	}
+
 	const trashItem = data[date];
 	if (!trashItem) {
-		return 'No trash data for this date.';
+		return 'No trash data for this date.'; // Handle case where no data for the specific date
 	}
 
-	return trashItem.id;
+	return trashItem.id; // Return the id of the trash item
 };

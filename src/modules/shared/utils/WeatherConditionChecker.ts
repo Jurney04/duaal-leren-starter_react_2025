@@ -1,18 +1,17 @@
 import { useGetWeatherData } from '~/shared/hooks/useGetWeatherData';
 import { getDate } from '../hooks/useGetDate';
+import { WeatherCondition } from '../services/weather/weather.service';
 
-export const WeatherConditionChecker = (type: String) => {
+export const WeatherConditionChecker = (
+	conditionType: keyof WeatherCondition,
+) => {
 	const date = getDate();
-	interface WeatherData {
-		[key: string]: {
-			id: string; 
-		};
-	}
-	const { data }: { data: WeatherData | undefined } = useGetWeatherData();
+
+	const { data } = useGetWeatherData();
 
 	// console.log(data);
 	if (!data) {
 		return 'Loading';
 	}
-	return data.forecast[date].condition[type] || 'Loading';
+	return data.forecast[date].condition[conditionType] || 'Loading';
 };
