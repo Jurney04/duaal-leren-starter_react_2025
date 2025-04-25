@@ -1,25 +1,31 @@
 import styles from '~/app/components/App/App.module.scss';
 import { clsx } from 'clsx';
+import PullToRefresh from '../shared/utils/PullToRefresh';
 import { WeatherDetailsNotification } from '~/shared/utils/WeatherDetailsNotification.tsx';
 import { Trans } from 'react-i18next';
 import { Link } from 'react-router';
 import { LanguageButton } from '~/shared/utils/LanguageButton';
+import { useGetNewData } from '~/shared/hooks/useGetNewData';
+
 export const Details = () => {
+	const fetchData = useGetNewData();
 	return (
-		<div className={clsx(styles['p-details'])}>
-			<LanguageButton />
-			<h1>
-				<Trans>details.title</Trans>
-			</h1>
-			{/* <div className={clsx(styles['p-home__greenBlob'])}></div> */}
-			<div className={clsx(styles['p-details__notification'])}>
-				{/* <WeatherConditionChecker /> <br />
+		<PullToRefresh onRefresh={fetchData}>
+			<div className={clsx(styles['p-details'])}>
+				<LanguageButton />
+				<h1>
+					<Trans>details.title</Trans>
+				</h1>
+				{/* <div className={clsx(styles['p-home__greenBlob'])}></div> */}
+				<div className={clsx(styles['p-details__notification'])}>
+					{/* <WeatherConditionChecker /> <br />
 				<br /> */}
-				<WeatherDetailsNotification />
+					<WeatherDetailsNotification />
+				</div>
+				<Link to="/home" className={clsx(styles['p-home__refresh'])}>
+					<Trans>details.return</Trans>
+				</Link>
 			</div>
-			<Link to="/home" className={clsx(styles['p-home__refresh'])}>
-				<Trans>details.return</Trans>
-			</Link>
-		</div>
+		</PullToRefresh>
 	);
 };
