@@ -2,7 +2,7 @@ import { useGetWeatherData } from '~/shared/hooks/useGetWeatherData';
 import { Trans } from 'react-i18next';
 import { getDate } from '../hooks/useGetDate';
 
-export const WeatherDetailsNotification: React.FC = () => {
+export const WeatherDetailsNotification = () => {
 	const date = getDate();
 
 	const { data } = useGetWeatherData();

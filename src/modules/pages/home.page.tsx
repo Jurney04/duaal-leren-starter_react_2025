@@ -7,7 +7,7 @@ import { Link } from 'react-router';
 import { Trans } from 'react-i18next';
 import { LanguageButton } from '~/shared/utils/LanguageButton';
 
-export const Home: React.FC = () => {
+export const Home = () => {
 	return (
 		<div className={clsx(styles['p-home'])}>
 			<LanguageButton />

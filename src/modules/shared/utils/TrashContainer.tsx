@@ -10,7 +10,7 @@ interface TrashData {
 	};
 }
 
-export const TrashContainer: React.FC = () => {
+export const TrashContainer= () => {
 	const date: string = getDate();
 	const { data }: { data: TrashData | undefined } = useGetTrashData();
 

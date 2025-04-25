@@ -3,7 +3,7 @@ import { Trans } from 'react-i18next';
 import styles from '~/app/components/App/App.module.scss';
 import { clsx } from 'clsx';
 
-export const GetNewData: React.FC = () => {
+export const GetNewData= () => {
 	const refetchData = useGetNewData();
 
 	return (

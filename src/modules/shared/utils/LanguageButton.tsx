@@ -3,7 +3,7 @@ import { Trans } from 'react-i18next';
 import styles from '~/app/components/App/App.module.scss';
 import { clsx } from 'clsx';
 
-export const LanguageButton: React.FC = () => {
+export const LanguageButton = () => {
 	// Correctly define the component as React.FC
 	const changeLanguage = useChangeLanguage(); // Get the changeLanguage function from the hook
 
